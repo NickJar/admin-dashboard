@@ -1,41 +1,123 @@
-.body{
-    margin: 0px;
+* { 
+    padding: 0;   
+    margin: 0;
 }
 
-.content
-{
+:root{
+--primaryColor: #3CDBC8;
+}
+
+.content{
     height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 350px 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
       'sidebar header'
       'sidebar main-content';  
 }
-.sidebar{
-    display: grid;
-    grid-area: sidebar;
-    background-color: rgb(92, 187, 255);
-}
+
 .header{
-    display: grid;
-    grid-area: header;  
-    background-color: #ededed;
-    padding: 10px;
-    
-}
-.main-content{
-    display: grid;
-    grid-area: main-content;
-    background-color: rgb(171, 171, 171);
-}
+    position: sticky;
+    grid-area: header;
+    padding: 1.5rem 3rem;
+    z-index: 3;
+    box-shadow: 0px 5px 5px 0px lightgray;
+  }
+  
 .top {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-}
-.search-bar{
+   display: grid;
+   grid-template-columns: 1fr max-content;
+   margin-bottom: 1.5rem; 
+  }
+
+.search{
     display: flex;
     align-items: center;
     margin-right: auto;
-    width: 100%;
+    width: 100%; 
+}
+
+.search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.search-bar{
+    display: inline-block;
+    border: 0;
+    background-color: lightgray;
+    padding: 0.75em 2em;
+    outline-color: darkgray;
+    margin-left: 1.25rem;
+    border-radius: 99em;
+    width: min(80%, 700px);   
+}
+.search-bar:focus{
+    outline: none;
+}
+
+.account{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 20px;
+}
+
+.user-name{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}  
+.profile img{
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-message{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.buttons button{
+    border: none;
+    height: 30px;
+    width: 90px;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--primaryColor);
+}
+
+.sidebar{
+    display: grid;
+    grid-area: sidebar;
+    background-color: var(--primaryColor);
+}
+
+.main-content{
+    display: grid;
+    grid-area: main-content;
 }
