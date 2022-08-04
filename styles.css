@@ -12,7 +12,7 @@
 .content{
     height: 100vh;
     display: grid;
-    grid-template-columns: 310px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
       'sidebar header'
@@ -128,7 +128,7 @@
     grid-template-rows: repeat(13, 1fr) ;
     grid-area: sidebar;
     padding-left: 1.5em;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: white;
     font-family: 'Roboto';
     background-color: var(--primaryColor);
@@ -221,7 +221,7 @@
     background-color: rgb(237, 237, 237);
     padding: 2rem;
     grid-template-columns: 1fr auto;
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: max-content;
     gap: 2rem;
     align-items: center;
     grid-template-areas:
@@ -232,6 +232,7 @@
 
 .projects{
     display: grid;
+    align-items: top;
     grid-area: projects;
     gap: 1.5em;
     font-family: 'Roboto';
@@ -241,6 +242,9 @@
 }
 
 .card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
     background-color: #fff;
     padding: 2em;
     border-radius: .5rem;
@@ -249,8 +253,19 @@
     
 }
 
+.card .icons{
+    display: flex;
+    justify-self: flex-end;
+    gap: 10px;
+}
+
 .trending{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
     padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 15px;
     background-color: #fff;
     font-family: 'Roboto';
@@ -260,20 +275,70 @@
     box-shadow: 0px 5px 5px 3px lightgray;
 }
 
+.trending img{
+    width: 2.7em;
+    height: 2.7em;
+    border-radius: 50%;
+}
+
+.murtsa{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.cbmcruz{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.zenerism{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.rubchicken{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+
 .announcements{
-    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    justify-content: center;
+    gap: 10px;
     padding-left: 15px;
     background-color: #fff;
     font-family: 'Roboto';
     height: 20rem;
+    font-size: .6em;
     width: 18rem;
     border-radius: .5rem;
     box-shadow: 0px 5px 5px 3px lightgray;
+}
+
+.text-1, .text-2{
+    padding: 10px;
+    margin-right: 8px;
+    border-bottom: 1px solid gray;
+}
+
+.text-3{
+    padding: 10px;
+    margin-right: 8px;
 }
 
 .right-bar{
     display: grid;
-    padding-top: 10px;
     gap: 15px;
     font-family: 'Roboto';
     font-size: 1.5em;
